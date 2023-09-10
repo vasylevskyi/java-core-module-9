@@ -3,10 +3,18 @@ package ua.goit;
 import java.util.LinkedList;
 import java.util.Objects;
 
+/*
+add(Object value) додає елемент в кінець
+remove(int index) видаляє елемент із вказаним індексом
+clear() очищає колекцію
+size() повертає розмір колекції
+get(int index) повертає елемент за індексом
+*/
+
 public class MyLinkedList <T> {
-    private Node<T> head;
-    private Node<T> tail;
-    private int listSize;
+    protected Node<T> head;
+    protected Node<T> tail;
+    protected int listSize;
 
     public void add(T value) {
         Node<T> node = new Node<>(value);
@@ -70,23 +78,13 @@ public class MyLinkedList <T> {
     }
 
     static class Node<T> {
-        private T value;
-        private Node<T> next;
-        private Node<T> previous;
+        protected T value;
+        protected Node<T> next;
+        protected Node<T> previous;
 
         public Node(T value) {
             this.value = value;
         }
 
     }
-
-
-
-/*
-add(Object value) додає елемент в кінець
-remove(int index) видаляє елемент із вказаним індексом
-clear() очищає колекцію
-size() повертає розмір колекції
-get(int index) повертає елемент за індексом
-*/
 }

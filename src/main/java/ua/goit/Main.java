@@ -30,7 +30,7 @@ public class Main {
         System.out.println(arrayList2.get(1));*/
 
 //      Test MyLinkedList
-        MyLinkedList<String> myLinkedList = new MyLinkedList<>();
+/*        MyLinkedList<String> myLinkedList = new MyLinkedList<>();
 
         myLinkedList.add("First, index = 0");
         myLinkedList.add("Second, index = 1");
@@ -55,7 +55,22 @@ public class Main {
 
         myLinkedList.clear();
         System.out.println(myLinkedList.size());
-        System.out.println(myLinkedList.get(0));
+        //System.out.println(myLinkedList.get(0));*/
+
+//      Test MyQueue
+        MyQueue<String> myQueue = new MyQueue<>();
+        myQueue.add("First Element");
+        myQueue.add("Second Element");
+
+        System.out.println(myQueue.peak());
+        System.out.println(myQueue.size());
+        System.out.println("------------------");
+
+        myQueue.poll();
+
+        System.out.println(myQueue.peak());
+        System.out.println(myQueue.size());
+
 
 
 
