@@ -3,9 +3,9 @@ package ua.goit;
 import java.util.Arrays;
 
 public class MyArrayList <T> {
-    private static final int DEFAULT_LIST_SIZE = 10;
-    private T[] data;
-    private int listSize;
+    protected static final int DEFAULT_LIST_SIZE = 10;
+    protected T[] data;
+    protected int listSize;
 
     public MyArrayList() {
         data = (T[]) new Object[DEFAULT_LIST_SIZE];

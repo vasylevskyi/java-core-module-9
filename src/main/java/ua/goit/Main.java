@@ -58,7 +58,7 @@ public class Main {
         //System.out.println(myLinkedList.get(0));*/
 
 //      Test MyQueue
-        MyQueue<String> myQueue = new MyQueue<>();
+/*        MyQueue<String> myQueue = new MyQueue<>();
         myQueue.add("First Element");
         myQueue.add("Second Element");
 
@@ -69,8 +69,25 @@ public class Main {
         myQueue.poll();
 
         System.out.println(myQueue.peak());
-        System.out.println(myQueue.size());
+        System.out.println(myQueue.size());*/
 
+//      Test MyStack
+        MyStack<String> myStack = new MyStack<>();
+        myStack.push("First Element");
+        myStack.push("Second Element");
+
+        System.out.println(myStack.get(0));
+        System.out.println(myStack.listSize);
+        System.out.println("--------------");
+
+/*        myStack.clear();
+        System.out.println(myStack.get(0));
+        System.out.println(myStack.listSize);*/
+
+        myStack.poll();
+        System.out.println(myStack.get(0));
+        System.out.println(myStack.listSize);
+        System.out.println(myStack.get(1));
 
 
 
