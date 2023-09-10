@@ -23,7 +23,7 @@ public class MyLinkedList <T> {
     public void remove(int index) {
         Objects.checkIndex(index, listSize);
         Node<T> currentNode = head;
-        Node<T> beforeIndexNode = head;
+        Node<T> beforeIndexNode;
         Node<T> afterIndexNode = head;
         if (listSize == 1) {
             head = null;
@@ -45,8 +45,8 @@ public class MyLinkedList <T> {
             afterIndexNode = afterIndexNode.next;
             if (i == index) {
                 beforeIndexNode = currentNode.previous;
-                beforeIndexNode.setNext(currentNode.next);
-                afterIndexNode.setPrevious(currentNode.previous);
+                beforeIndexNode.next = currentNode.next;
+                afterIndexNode.previous = currentNode.previous;
             }
             currentNode = currentNode.next;
         }
@@ -78,13 +78,6 @@ public class MyLinkedList <T> {
             this.value = value;
         }
 
-        public void setNext(Node<T> next) {
-            this.next = next;
-        }
-
-        public void setPrevious(Node<T> previous) {
-            this.previous = previous;
-        }
     }
 
 
