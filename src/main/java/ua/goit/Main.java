@@ -84,7 +84,7 @@ public class Main {
         System.out.println(myStack.get(0));
         System.out.println(myStack.listSize);*/
 
-        myStack.poll();
+        myStack.pop();
         System.out.println(myStack.get(0));
         System.out.println(myStack.listSize);
         System.out.println(myStack.get(1));

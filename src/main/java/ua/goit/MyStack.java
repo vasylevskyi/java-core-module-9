@@ -20,7 +20,7 @@ public class MyStack<T> extends MyArrayList<T> {
     public T peak() {
         return data[listSize - 1];
     }
-    public T poll() {
+    public T pop() {
         T lastElementValue = data[listSize - 1];
         data[listSize - 1] = null;
         listSize--;
