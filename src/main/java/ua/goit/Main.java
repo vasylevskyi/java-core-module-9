@@ -1,7 +1,10 @@
 package ua.goit;
 
+import java.security.InvalidKeyException;
+import java.sql.SQLOutput;
+
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InvalidKeyException {
 //      Test MyArrayList
 /*        MyArrayList<String> arrayList1 = new MyArrayList<>();
         MyArrayList<Integer> arrayList2 = new MyArrayList<>();
@@ -72,7 +75,7 @@ public class Main {
         System.out.println(myQueue.size());*/
 
 //      Test MyStack
-        MyStack<String> myStack = new MyStack<>();
+/*        MyStack<String> myStack = new MyStack<>();
         myStack.push("First Element");
         myStack.push("Second Element");
 
@@ -80,15 +83,40 @@ public class Main {
         System.out.println(myStack.listSize);
         System.out.println("--------------");
 
-/*        myStack.clear();
+*//*        myStack.clear();
         System.out.println(myStack.get(0));
-        System.out.println(myStack.listSize);*/
+        System.out.println(myStack.listSize);*//*
 
         myStack.pop();
         System.out.println(myStack.get(0));
         System.out.println(myStack.listSize);
-        System.out.println(myStack.get(1));
+        System.out.println(myStack.get(1));*/
 
+//      Test MyHashMap
+        MyHashMap<String, String> myHashMap = new MyHashMap<>();
+        myHashMap.put("First key", "First value");
+        myHashMap.put("First key", "False value");
+        myHashMap.put("Second key", "Second value");
+        myHashMap.put("Second key", "False value");
+        myHashMap.put("Third key", "Third value");
+
+        System.out.println(myHashMap.get("First key"));
+        System.out.println(myHashMap.get("Second key"));
+        System.out.println(myHashMap.get("Third key"));
+        System.out.println("-----------------------");
+
+        myHashMap.remove("Second key");
+
+        System.out.println(myHashMap.get("First key"));
+        System.out.println(myHashMap.get("Second key"));
+        System.out.println(myHashMap.get("Third key"));
+        System.out.println(myHashMap.size());
+
+        System.out.println("------------------------");
+
+        myHashMap.clear();
+
+        System.out.println(myHashMap.size());
 
 
     }
